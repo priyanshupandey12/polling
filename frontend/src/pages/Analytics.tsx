@@ -303,7 +303,7 @@ export default function Analytics() {
         <footer className="border-t-2 border-black mt-16">
           <div className="max-w-5xl mx-auto px-8 py-8 flex justify-between items-center">
             <span className="font-bold text-xl">PollPulse</span>
-            <p className="text-gray-500 text-sm">© 2024 PollPulse. Clarity in every vote.</p>
+            <p className="text-gray-500 text-sm">© 2026 PollPulse. Clarity in every vote.</p>
           </div>
         </footer>
 
