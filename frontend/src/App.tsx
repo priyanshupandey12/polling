@@ -13,6 +13,7 @@ import CreatePoll from "./pages/CreatePoll";
 import PollPage from "./pages/PollPage";
 import Analytics from "./pages/Analytics";
 import PollDetail from "./pages/PollDetail";
+import LandingPage from "./pages/landingPage";
 
 
 export default function App() {
@@ -49,6 +50,7 @@ useEffect(() => {
     <BrowserRouter>
       <Routes>
 
+     <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={
           <PublicRoute>
             <Login />
@@ -89,7 +91,7 @@ useEffect(() => {
           </ProtectedRoute>
         } />
 
-       <Route path="/" element={<Navigate to="/login" replace />} />
+  
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
