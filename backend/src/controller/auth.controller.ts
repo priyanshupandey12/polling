@@ -5,8 +5,8 @@ import User from '../models/user.model.js';
 
 const cookieOptions = (maxAge: number) => ({
   httpOnly: true,
-  secure: false,
-sameSite: "lax" as const,
+  secure: true,
+sameSite: "none" as const,
   maxAge,
 });
 

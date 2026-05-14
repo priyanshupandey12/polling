@@ -3,6 +3,7 @@ import ApiError from '../utils/error.js';
 import { createPollService,getPollByIdService, publishPollService } from '../services/poll.services.js';
 import Poll from '../models/poll.model.js';
 import Question from '../models/questions.model.js';
+import mongoose from 'mongoose';
 
 
 
@@ -64,7 +65,7 @@ export const publishPoll = async (req: Request, res: Response) => {
 
 export const getUserPolls = async (req: Request, res: Response) => {
   const userId = req.user?.userId;
-  const polls = await Poll.find({ creatorId: userId }).sort({ createdAt: -1 });
+  const polls = await Poll.find({ creatorId: new mongoose.Types.ObjectId(userId) }).sort({ createdAt: -1 });
   res.status(200).json({ success: true, data: polls });
 };
 
